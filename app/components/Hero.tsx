@@ -41,15 +41,15 @@ export default function Hero() {
       className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-violet-50 flex items-center justify-center px-4 relative overflow-hidden pt-20 w-full"
       id="hero"
     >
-      {/* Enhanced Background decorations - Adjusted for mobile */}
+      {/* Optimized Background decorations - Static on mobile */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated geometric shapes - Smaller on mobile */}
+        {/* Static elements on mobile, animated on desktop */}
+        <div className="absolute top-20 left-2 md:left-10 w-16 h-16 md:w-32 md:h-32 bg-gradient-to-br from-blue-200/40 to-violet-200/40 rounded-3xl rotate-45 md:hidden" />
         <motion.div
-          className="absolute top-20 left-2 md:left-10 w-16 h-16 md:w-32 md:h-32 bg-gradient-to-br from-blue-200/60 to-violet-200/60 rounded-3xl rotate-45"
+          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-blue-200/60 to-violet-200/60 rounded-3xl rotate-45 hidden md:block"
           animate={{
             y: [0, -30, 0],
             rotate: [45, 90, 45],
-            scale: [1, 1.1, 1],
           }}
           transition={{
             duration: 8,
@@ -57,12 +57,13 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         />
+        
+        <div className="absolute top-40 right-2 w-12 h-12 bg-gradient-to-br from-violet-200/40 to-blue-200/40 rounded-full md:hidden" />
         <motion.div
-          className="absolute top-40 right-2 md:right-20 w-12 h-12 md:w-24 md:h-24 bg-gradient-to-br from-violet-200/60 to-blue-200/60 rounded-full"
+          className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-violet-200/60 to-blue-200/60 rounded-full hidden md:block"
           animate={{
             x: [0, 20, 0],
             y: [0, -20, 0],
-            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 10,
@@ -70,26 +71,17 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         />
-        <motion.div
-          className="absolute bottom-40 left-2 md:left-20 w-10 h-10 md:w-20 md:h-20 bg-gradient-to-br from-blue-300/50 to-violet-300/50 rounded-2xl rotate-12"
-          animate={{
-            rotate: [12, 60, 12],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
 
-        {/* Large gradient blobs - Adjusted positioning */}
+        {/* Static gradient blobs on mobile */}
+        <div className="absolute -top-40 -right-20 w-[250px] h-[250px] bg-gradient-to-br from-blue-200/30 to-violet-200/30 rounded-full mix-blend-multiply filter blur-2xl md:hidden" />
+        <div className="absolute -bottom-40 -left-20 w-[250px] h-[250px] bg-gradient-to-tr from-violet-200/30 to-blue-200/30 rounded-full mix-blend-multiply filter blur-2xl md:hidden" />
+        
+        {/* Animated gradient blobs on desktop */}
         <motion.div
-          className="absolute -top-40 -right-20 md:-right-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-br from-blue-200/40 to-violet-200/40 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/40 to-violet-200/40 rounded-full mix-blend-multiply filter blur-3xl hidden md:block"
           animate={{
             x: [0, 50, 0],
             y: [0, -50, 0],
-            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 20,
@@ -98,11 +90,10 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-20 md:-left-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-tr from-violet-200/40 to-blue-200/40 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-violet-200/40 to-blue-200/40 rounded-full mix-blend-multiply filter blur-3xl hidden md:block"
           animate={{
             x: [0, -50, 0],
             y: [0, 50, 0],
-            scale: [1, 1.3, 1],
           }}
           transition={{
             duration: 18,
@@ -111,9 +102,9 @@ export default function Hero() {
           }}
         />
 
-        {/* Floating tech elements - Hidden on small screens */}
+        {/* Floating tech elements - Desktop only */}
         <motion.div
-          className="absolute top-32 right-16 md:right-32 text-blue-400/30 hidden md:block"
+          className="absolute top-32 right-32 text-blue-400/30 hidden lg:block"
           animate={{
             y: [0, -20, 0],
             rotate: [0, 15, 0],
@@ -124,10 +115,10 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         >
-          <TrendingUp className="w-8 h-8 md:w-12 md:h-12" />
+          <TrendingUp className="w-12 h-12" />
         </motion.div>
         <motion.div
-          className="absolute bottom-32 right-8 md:right-16 text-violet-400/30 hidden md:block"
+          className="absolute bottom-32 right-16 text-violet-400/30 hidden lg:block"
           animate={{
             y: [0, -25, 0],
             x: [0, 15, 0],
@@ -138,7 +129,7 @@ export default function Hero() {
             ease: "easeInOut",
           }}
         >
-          <Rocket className="w-6 h-6 md:w-10 md:h-10" />
+          <Rocket className="w-10 h-10" />
         </motion.div>
       </div>
 
@@ -154,27 +145,51 @@ export default function Hero() {
             Agustín <br className="md:hidden" /> Mc Innes Alemany
           </h1>
           <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="md:hidden">
+              <Code className="w-6 h-6 text-blue-600" />
+            </div>
             <motion.div
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+              className="hidden md:block"
             >
               <Code className="w-6 h-6 text-blue-600" />
             </motion.div>
             <p className="text-xl md:text-2xl font-bold text-gray-700">Programador Web</p>
-            <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}>
+            <div className="md:hidden">
+              <Sparkles className="w-6 h-6 text-violet-600" />
+            </div>
+            <motion.div 
+              animate={{ scale: [1, 1.2, 1] }} 
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+              className="hidden md:block"
+            >
               <Sparkles className="w-6 h-6 text-violet-600" />
             </motion.div>
           </div>
         </motion.div>
 
-        {/* Main Value Proposition - Fixed Text Layout */}
+        {/* Main Value Proposition - Optimized for mobile */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-8 px-2"
         >
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-6 lg:leading-normal">
+          {/* Simple version for mobile */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 leading-normal md:hidden">
+            Transforma tu negocio con un software que{" "}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+                atraiga más clientes
+              </span>
+              <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-violet-600 rounded-full" />
+            </span>{" "}
+            <span className="text-2xl">🚀</span>
+          </h2>
+
+          {/* Complex version for desktop */}
+          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-normal hidden md:block">
             Transforma tu negocio con un software que{" "}
             <motion.span
               className="relative inline-block"
@@ -201,32 +216,45 @@ export default function Hero() {
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
-              className="text-2xl md:text-4xl"
+              className="text-4xl"
             >
               🚀
             </motion.span>
           </h2>
         </motion.div>
-        {/* Enhanced CTA Button - Most Prominent */}
+        {/* Enhanced CTA Button - Simplified on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="my-20 px-2"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex justify-center">
+          <div className="flex justify-center md:hidden">
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="relative bg-gradient-to-r from-blue-900 via-blue-600 to-violet-800 hover:from-violet-900 hover:via-blue-950 hover:to-blue-700 text-white px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl lg:text-2xl font-black rounded-3xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 transform border-4 border-white/30 group overflow-hidden"
+              className="relative bg-gradient-to-r from-blue-900 via-blue-600 to-violet-800 text-white px-8 py-4 text-lg font-black rounded-3xl shadow-2xl border-4 border-white/30 group"
+            >
+              <span className="flex items-center gap-2 relative z-10">
+                🎯 Agendá una reunión gratis
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
+            </Button>
+          </div>
+          
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="justify-center hidden md:flex">
+            <Button
+              onClick={scrollToContact}
+              size="lg"
+              className="relative bg-gradient-to-r from-blue-900 via-blue-600 to-violet-800 hover:from-violet-900 hover:via-blue-950 hover:to-blue-700 text-white px-12 py-6 text-xl lg:text-2xl font-black rounded-3xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 transform border-4 border-white/30 group overflow-hidden"
             >
               <motion.span
-                className="flex items-center gap-2 md:gap-4 relative z-10"
+                className="flex items-center gap-4 relative z-10"
                 animate={{ x: [0, 4, 0] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
               >
                 🎯 Agendá una reunión gratis
-                <ArrowRight className="w-5 h-5 md:w-7 md:h-7 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" />
               </motion.span>
 
               {/* Animated background glow */}
@@ -262,7 +290,7 @@ export default function Hero() {
           </motion.p>
         </motion.div>
 
-        {/* Enhanced Stats Cards */}
+        {/* Optimized Stats Cards */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
