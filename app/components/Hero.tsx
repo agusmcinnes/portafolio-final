@@ -8,13 +8,13 @@ const statsCards = [
   {
     icon: GraduationCap,
     title: "Formación profesional",
-    description: "Estudiante UTN",
+    description: "Tecnicatura Universitaria en Programación UTN",
     color: "from-blue-500 to-blue-600",
   },
   {
     icon: Briefcase,
     title: "Experiencia real",
-    description: "1+ año en desarrollo web",
+    description: "2+ años programando",
     color: "from-violet-500 to-violet-600",
   },
   {
@@ -25,8 +25,8 @@ const statsCards = [
   },
   {
     icon: Users,
-    title: "Clientes felices",
-    description: "100% satisfacción",
+    title: "Clientes satisfechos",
+    description: "Siempre cumplo al 100% con los requisitos de mis clientes",
     color: "from-violet-500 to-blue-500",
   },
 ]

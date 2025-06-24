@@ -72,7 +72,7 @@ export default function Contact() {
                   <Link 
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=agustinmcinnes@gmail.com&su=&body=" 
                     target="_blank"
-                    className="text-gray-600 hover:text-blue-300 hover:underline transition-colors duration-300"
+                    className="text-gray-600 hover:text-violet-600 hover:underline transition-colors duration-300"
                   >
                     agustinmcinnes@gmail.com
                   </Link>
@@ -95,7 +95,7 @@ export default function Contact() {
               <p className="text-gray-600 mb-4 text-sm">Hacé clic para ver mi trabajo y conectar</p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.instagram.com/agustinmcinnes/"
+                  href="https://www.instagram.com/agusmcinnes/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-300 hover:shadow-pink-300"

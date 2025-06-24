@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Agustín Mc Innes - Programador Web Freelance | Mar del Plata",
+  title: "Agustín Mc Innes - Programador de Software | Mar del Plata",
   description:
     "Programador web freelance especializado en crear sitios modernos, rápidos y optimizados que generan resultados para tu negocio. Landing pages, tiendas online y más.",
   keywords: "programador web, freelance, Mar del Plata, desarrollo web, landing pages, tiendas online, SEO",

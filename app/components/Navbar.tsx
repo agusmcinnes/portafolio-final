@@ -140,7 +140,7 @@ export default function Navbar() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsOpen(!isOpen)}
-                  className="w-10 h-10 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-gray-700 hover:text-gray-900 hover:bg-white/20 transition-all duration-300"
+                  className="w-10 h-10 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-gray-700 hover:text-gray-900 hover:bg-white/20 transition-all duration-300" aria-label="Abrir menu"
                 >
                   <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
                     {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

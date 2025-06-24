@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion"
-import { MapPin, Heart, Zap } from "lucide-react"
+import { MapPin, Heart, Zap, Linkedin } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
@@ -60,6 +60,24 @@ export default function About() {
                 <StatisticItem number={2} suffix="+" label="Años" color="text-violet-600" delay={0.2} />
                 <StatisticItem number={100} suffix="%" label="Satisfacción" color="text-blue-600" delay={0.4} />
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="pt-6"
+              >
+                <a
+                  href="https://www.linkedin.com/in/agustinmcinnes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+                >
+                  <Linkedin className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                  <span>Mira mi LinkedIn</span>
+                </a>
+              </motion.div>
             </div>
           </div>
 
