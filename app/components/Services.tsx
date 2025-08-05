@@ -21,10 +21,10 @@ const services = [
 	},
 	{
 		icon: FileText,
-		title: "Mantenimiento Web",
+		title: "Sistema de gestión",
 		description:
-			"Mantené tu web siempre actualizada, segura y funcionando al 100%. No te preocupes más por problemas técnicos, caídas o páginas desactualizadas. Yo me encargo de todo, con mi servicio de mantenimiento tu sitio estará siempre listo para vender y atraer clientes, sin dolores de cabeza ni sorpresas inesperadas.",
-		benefits: ["Actualización de contenidos", "Backups periódicos", "Soporte técnico", "Bases de datos"],
+			"Mantené tu web siempre actualizada, segura y funcionando al 100%. No te preocupes más por problemas técnicos, caídas o páginas desactualizadas. Yo me encargo de todo, con el sistema de gestión tu sitio estará siempre listo para ser actualizado desde el panel de administrador, sin dolores de cabeza ni sorpresas inesperadas.",
+		benefits: ["Actualización de contenidos", "Base de datos", "Soporte técnico", "Seguridad avanzada", "Ahorra tiempo"],
 	},
 	{
 		icon: Zap,

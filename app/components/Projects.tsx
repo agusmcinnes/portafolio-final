@@ -14,10 +14,22 @@ const projects = [
 		images: [
 			"/images/limbip.webp",
 			"/images/limbip2.webp",
-      "/images/limbip3.webp"
+      		"/images/limbip3.webp",
 		],
 		tags: ["Institucional", "React", "UI/UX"],
 		demoUrl: "https://limbip.com/",
+		codeUrl: "#",
+	},
+	{
+		title: "Travel Group Mar del Plata",
+		description:
+			"Desarrollé el sitio web para Travel Group Mar del Plata, una agencia de turismo enfocada en ofrecer experiencias únicas en la ciudad. El proyecto incluyó un diseño atractivo y funcional, optimizado para SEO y con un enfoque en la conversión de visitantes en clientes. Utilicé Next.js y Tailwind CSS para garantizar un rendimiento óptimo y una experiencia de usuario fluida. El sitio cuenta con secciones informativas, sección de paquetes y excursiones, sección de hoteles de la empresa y una galería de imágenes que destacan los servicios turísticos ofrecidos.",
+		images: ["/images/travel-project-1.webp",
+			"/images/travel-project-2.webp",
+			"/images/travel-project-3.webp"
+		],
+		tags: ["Sitio institucional", "SEO", "Diseño web"],
+		demoUrl: "https://travelmardelplata.com/",
 		codeUrl: "#",
 	},
 	{
